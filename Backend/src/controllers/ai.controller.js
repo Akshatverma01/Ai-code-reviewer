@@ -8,6 +8,7 @@ export const getReview = async (req, res) => {
     return res.status(400).send("Code is required");
   }
   const response = await aiService(code,apiKey);
+  console.log(response)
   return res.send(response);
 };
 
